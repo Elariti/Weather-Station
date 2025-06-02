@@ -1,4 +1,3 @@
-markdown
 # THE WEATHER STATION
 
 **Submitted by:**  
@@ -54,8 +53,136 @@ Monitors temperature, light intensity, dew point, earthquakes, and smoke. Displa
 
 ---
 
-## Flowchart
-![Program Logic Flowchart](media/image4.png)  
-Created with Draw.io. Illustrates sensor monitoring, mode switching, and alert logic.
+# Mobile App for Weather Station
 
+## Development Platform
+
+**MIT App Inventor**
+
+Used to create an interactive interface for displaying real-time weather data with Bluetooth connectivity.
+
+## Core Functionality
+
+- **Bluetooth Integration**: Connects to Arduino via HC-05 Bluetooth module
+
+- **Real-time Updates**: Continuously refreshes sensor data (temperature, humidity, dew point)
+
+- **Alert System**: Processes earthquake warnings from Arduino and displays pop-up notifications
+
+- **Timer-driven**: Automated data polling at regular intervals
+
+## Interface Design
+
+![image](https://github.com/user-attachments/assets/b808b71f-1cf4-4149-875a-98f3ebc0cf66)
+
+
+*Features intuitive weather-themed design with clear data visualization*
+
+### Frontend Components:
+
+1. **Connection Panel**: Bluetooth device selection
+
+2. **Data Display Area**: Shows temperature, humidity, dew point
+
+3. **Status Indicators**: Connection status and alert notifications
+
+4. **Theme Elements**: Weather icons and color-coded backgrounds
+
+## Implementation Approach
+
+### Data Flow Architecture
+
+```mermaid
+
+graph LR
+
+A[Arduino Sensors] --> B[HC-05 Bluetooth]
+
+B --> C[Mobile App]
+
+C --> D[Data Parser]
+
+D --> E[Display Interface]
+
+D --> F[Alert System]
+
+```
+
+### Key Processes:
+
+1. **Bluetooth Pairing**: User selects device from available list
+
+2. **Data Reception**: Raw sensor data received via Bluetooth
+
+3. **Data Parsing**: Splits incoming strings into temperature/humidity/dew point
+
+4. **UI Update**: Displays values in corresponding fields
+
+5. **Alert Handling**: Processes warning messages and triggers notifications
+
+## Technical Challenges
+
+### 1. Data Parsing Errors
+
+- **Problem**: "Select list item: List index too large" errors
+
+- **Cause**: Attempting to access non-existent list indices
+
+- **Solution**: Added validation checks before accessing list elements
+
+### 2. Inconsistent Data Formatting
+
+- **Problem**: "Attempt to get item number 3 of a list of length 2"
+
+- **Cause**: Missing delimiters in Bluetooth messages
+
+- **Solution**: Standardized data format with strict delimiter usage
+
+### 3. Bluetooth Connectivity Issues
+
+- **Problem**: Intermittent disconnections and data loss
+
+- **Cause**: Unstable Bluetooth signal and buffer overflow
+
+- **Solution**: Implemented data chunking and connection retry logic
+
+### Critical Components:
+
+- **Bluetooth Controller**: Manages device connection/disconnection
+
+- **Data Splitter**: Separates combined sensor values
+
+- **Timer Function**: Triggers periodic data requests
+
+- **Alert Handler**: Processes warning messages and displays notifications
+
+*Setup for device discovery and pairing*
+
+## User Experience Features
+
+- **One-tap Connection**: Simple device pairing process
+
+- **Color-coded Values**: Visual indicators for normal/warning states
+
+- **Vibration Alerts**: Haptic feedback for warnings
+
+- **Persistent Logging**: Stores recent readings for reference
+
+- **Auto-reconnect**: Handles temporary disconnections seamlessly
+
+## Final Implementation
+
+The optimized solution provides:
+
+- Reliable Bluetooth communication
+
+- Accurate real-time data display
+
+- Instant hazard notifications
+
+- Intuitive user interface
+
+- Robust error handling
+
+> **Note**: The mobile app successfully communicates with the weather station hardware, though integration with the Bangle.js watch presented additional challenges not covered in this section.
 ---
