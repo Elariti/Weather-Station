@@ -1,27 +1,18 @@
 # THE WEATHER STATION
 
 **Submitted by:**  
-Imaan Soliman (Student ID: 22847545)  
-Jagriti Singh (Student ID: 23839461)  
-Jivitta Manivannan (Student ID: 23829398)  
+
+Imaan Soliman 
+Jagriti Singh 
+Jivitta Manivannan  
 
 **University of Northampton**  
 Electronics and Computer Engineering  
 Microprocessors and IoT  
-**Deadline:** 26/01/2025, 23:59  
+**Deadline:** 26/01/2025, 23:59
 
 ## Objective
 Design and implement an IoT system using a microcontroller (ATmega328p/Arduino Uno R3) to monitor and display real-time data. Includes Tinkercad virtual prototyping with multiple sensors.
-
-## Contents
-- [Tinkercad Links and Designs](#tinkercad-links-and-designs)
-- [Flowcharts](#flowchart)
-- [Program Code: Tinker Cad](#program-code-arduino-tinkercad)
-- [Mobile App Weather Station](#mobile-app-for-weather_station)
-- [Bangle 2](#bangle-watch)
-- [Demo Videos](#demo-videos)
-- [Error and Obstacles](#error-and-obstacles)
-- [Evaluation](#evaluation)
 
 ---
 
